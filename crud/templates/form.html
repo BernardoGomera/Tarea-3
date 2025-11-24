@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h3>{% if student and student.get('id') %}Editar{% else %}Crear{% endif %} estudiante</h3>
+  <form method="post">
+    <div class="mb-3">
+      <label class="form-label">Nombre</label>
+      <input class="form-control" name="nombre" value="{{ student.nombre if student else '' }}">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Correo</label>
+      <input class="form-control" name="correo" value="{{ student.correo if student else '' }}">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Nota</label>
+      <input class="form-control" name="nota" value="{{ student.nota if student else '' }}">
+    </div>
+    <button class="btn btn-primary" type="submit">Guardar</button>
+    <a class="btn btn-secondary" href="/">Cancelar</a>
+  </form>
+{% endblock %}

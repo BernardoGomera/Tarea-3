@@ -1,0 +1,8 @@
+crud/.venv/
+crud/database.db
+*.pyc
+__pycache__/
+*.egg-info/
+venv/
+env/
+*.log
